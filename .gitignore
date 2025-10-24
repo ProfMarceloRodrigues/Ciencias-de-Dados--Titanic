@@ -1,0 +1,20 @@
+# Ambientes virtuais
+.venv/
+venv/
+
+# Arquivos temporários e caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Dados e artefatos grandes
+data/
+artifacts/
+
+# Configurações de IDE
+.vscode/
+.idea/

@@ -1,93 +1,80 @@
-# Ciencias-de-Dados--Titanic  
+# Titanic - Machine Learning from Disaster
 
-# 🛳️ Análise do Titanic — Parte 1
+Este projeto apresenta uma análise e modelagem preditiva aplicada ao famoso conjunto de dados *Titanic*. 
+O objetivo é explorar os dados, tratar variáveis e aplicar diferentes algoritmos de Machine Learning para prever 
+quais passageiros sobreviveram ao desastre.
 
-Este projeto tem como objetivo realizar uma **análise exploratória de dados (EDA)** sobre o clássico dataset **Titanic - Machine Learning from Disaster**, disponível no [Kaggle](https://www.kaggle.com/competitions/titanic).
+## 🧭 Estrutura do Projeto
 
-A análise faz parte de um estudo de **Ciência de Dados e Machine Learning**, abordando as etapas iniciais do processo: importação, exploração e tratamento dos dados.
-
----
-
-## 📊 Objetivos do Projeto
-
-- Compreender a estrutura da base de dados do Titanic  
-- Identificar variáveis relevantes para análise preditiva (como sobrevivência dos passageiros)  
-- Detectar e tratar valores ausentes  
-- Explorar distribuições, correlações e padrões nos dados  
-- Preparar a base para modelagem futura
-
----
-
-## 🧩 Base de Dados
-
-O dataset contém informações de passageiros do Titanic, incluindo:
-- Nome, sexo e idade  
-- Classe de viagem (1ª, 2ª, 3ª)  
-- Número de familiares a bordo  
-- Valor da passagem (`Fare`)  
-- Porto de embarque (`Embarked`)  
-- Status de sobrevivência (`Survived`)
-
----
+```
+.
+├── README.md
+├── requirements.txt
+├── LICENSE
+├── .gitignore
+├── data/
+│   ├── train.csv
+│   └── test.csv
+└── notebooks/
+    └── Análise_do_Titanic_-_Parte_5_-_Arquivo_Final.ipynb
+```
 
 ## ⚙️ Etapas Realizadas
 
-1. **Importação dos dados**
-   - Carregamento dos arquivos `titanic_train.csv` e `titanic_test.csv` usando `pandas`.
+- Importação e limpeza de dados
+- Engenharia de atributos (tratamento de nulos, encoding, scaling)
+- Visualizações com matplotlib e seaborn
+- Treinamento e comparação de modelos (Regressão Logística, Random Forest, MLP)
+- Avaliação com métricas de desempenho e matriz de confusão
 
-2. **Análise inicial com ydata-profiling**
-   - Geração de relatórios automáticos com a biblioteca [`ydata-profiling`](https://github.com/ydataai/ydata-profiling) para identificar outliers, tipos de dados e estatísticas descritivas.
+## 🧠 Modelos Aplicados
 
-3. **Verificação de tipos e valores nulos**
-   - Análise das colunas com `DataFrame.info()`, `dtypes` e `isnull()`.
+- `LogisticRegression`
+- `RandomForestClassifier`
+- `MLPClassifier`
 
-4. **Tratamento de dados ausentes**
-   - Substituição de valores nulos e ajustes em variáveis categóricas.
+## 📦 Dependências
 
-5. **Visualização e preparação**
-   - Preparação da base para futuras etapas de modelagem e machine learning.
+As principais bibliotecas utilizadas no projeto estão listadas em `requirements.txt`.
 
----
+## 🚀 Como Executar
 
-## 🧠 Principais Insights
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/SEU_USUARIO/titanic-ml.git
+   cd titanic-ml
+   ```
 
-- Algumas variáveis apresentam **valores ausentes significativos**, exigindo imputação ou exclusão.  
-- As colunas `Age`, `Cabin` e `Embarked` foram as mais críticas em termos de dados faltantes.  
-- Observou-se relação entre **classe de viagem**, **sexo** e **probabilidade de sobrevivência** — pontos importantes para modelagem preditiva.
+2. Crie e ative o ambiente virtual:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # Linux/Mac
+   .venv\Scripts\activate   # Windows
+   ```
 
----
+3. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## 🧰 Tecnologias Utilizadas
+4. Execute o notebook no Jupyter:
+   ```bash
+   jupyter notebook
+   ```
 
-- **Python 3**
-- **Pandas**
-- **YData Profiling** (antigo Pandas Profiling)
-- **Jupyter Notebook**
+5. Abra o arquivo `notebooks/Análise_do_Titanic_-_Parte_5_-_Arquivo_Final.ipynb` e execute todas as células.
 
----
+## 📈 Resultados
 
-## 🚀 Próximos Passos
+Os resultados incluem comparação de desempenho entre os modelos e análise visual das predições.
 
-- Realizar **feature engineering** (criação de novas variáveis relevantes)  
-- Testar diferentes **modelos de machine learning** (Logistic Regression, Random Forest, etc.)  
-- Avaliar o desempenho dos modelos com base na acurácia  
-- Submeter previsões ao Kaggle
+## 🧾 Licença
 
----
+Este projeto é licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## 📁 Estrutura do Projeto
-
-
-
----
-
-## 👨‍💻 Autor
+## 👤 Autor
 
 **Marcelo Rodrigues**  
-Consultor de Dados e fundador da [Starts Treinamentos & Consultoria](https://www.linkedin.com/in/marcelordasilva/)  
-📧 ma23cgl@gmail.com  
-
----
-
-> Este projeto faz parte de um estudo prático sobre análise de dados e aprendizado de máquina, utilizando o dataset Titanic como base introdutória para problemas de classificação.
-
+Consultor e Fundador da Starts Treinamentos & Consultoria  
+[LinkedIn](https://www.linkedin.com/in/marcelordasilva/)  
+E-mail: ma23cgl@gmail.com
